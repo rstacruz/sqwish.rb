@@ -1,0 +1,3 @@
+[submodule "sqwish"]
+	path = sqwish
+	url = https://github.com/ded/sqwish
