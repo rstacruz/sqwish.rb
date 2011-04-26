@@ -7,11 +7,20 @@ module Sqwish
     end
 
     def sqwish_js
-      @squish_js ||= ExecJS.compile(sqwish_src)
+      @squish_js ||= ExecJS.compile(sqwish_wrapper)
+    end
+
+    def sqwish_wrapper
+      # If we're not using node, some things will have to be stubbed.
+      %{
+        var require = function() { return {}; };
+        var module  = { exports: {} };
+        #{sqwish_src}
+      }
     end
 
     def sqwish_src
-      open(sqwish_js_path).read
+      src = open(sqwish_js_path).read
     end
 
     def sqwish_js_path
