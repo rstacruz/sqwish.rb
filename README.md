@@ -22,3 +22,4 @@ You can also use the `strict: false` flag (it defaults to true):
  * **Sqwish** is by Dustin Diaz @ [github.com/ded/sqwish](https://github.com/ded/sqwish).
  * This Ruby gem is by Rico Sta. Cruz @ [github.com/rstacruz/sqwish.rb](http://github.com/rstacruz/sqwish.rb).
 
+Released under the MIT license.
