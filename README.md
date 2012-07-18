@@ -91,7 +91,7 @@ Use Sqwish! It will remove those duplicate @font-faces for you and combine
 anything else that can be combined.
 
 ``` css
-/* Method 2's nice output with YUI :D */
+/* Method 2's nice output with Sqwish :D */
 @font-face{font-family:'Montserrat';...}
 body,.page h1{font-family:Montserrat}
 ```
