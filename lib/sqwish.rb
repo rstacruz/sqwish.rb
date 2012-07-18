@@ -3,7 +3,8 @@ require 'execjs'
 module Sqwish
   class << self
     def minify(src, options={:strict => false})
-      sqwish_js.call "sqwish", src, !! options[:strict]
+      is_strict = !! options[:strict]
+      sqwish_js.call "sqwish", src, is_strict
     end
 
     def sqwish_js
@@ -11,7 +12,7 @@ module Sqwish
     end
 
     def sqwish_wrapper
-      # If we're not using node, some things will have to be stubbed.
+      # Since we're not using node, some things will have to be stubbed.
       %{
         var require = function() { return {}; };
         var module  = { exports: {} };
