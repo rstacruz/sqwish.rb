@@ -7,6 +7,8 @@ module Sqwish
       sqwish_js.call "sqwish", src, is_strict
     end
 
+    alias compress minify
+
     def sqwish_js
       @squish_js ||= ExecJS.compile(sqwish_wrapper)
     end
