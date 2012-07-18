@@ -31,7 +31,7 @@ module Sqwish
     end
 
     def version
-      "0.1.2"
+      "0.2.0"
     end
   end
 end
