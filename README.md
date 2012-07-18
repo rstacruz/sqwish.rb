@@ -10,12 +10,12 @@ And use it like so:
 
     require 'sqwish'
     Sqwish.minify "div { color: red; } div { background: black; }"
-    #=> "div{color:red;background:black}"
-
-You can also use the `strict: false` flag (it defaults to true):
-
-    Sqwish.minify "div { color: red; } div { background: black; }", strict: false
     #=> "div{color:red}div{background:black}"
+
+You can also use the `strict: true` flag (it defaults to false):
+
+    Sqwish.minify "div { color: red; } div { background: black; }", strict: true
+    #=> "div{color:red;background:black}"
 
 ## Authors
 

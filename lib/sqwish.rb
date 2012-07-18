@@ -2,7 +2,7 @@ require 'execjs'
 
 module Sqwish
   class << self
-    def minify(src, options={:strict => true})
+    def minify(src, options={:strict => false})
       sqwish_js.call "sqwish", src, !! options[:strict]
     end
 
