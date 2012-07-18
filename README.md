@@ -41,6 +41,9 @@ In your `config/environments/production.rb`:
 
 ``` ruby
 config.assets.css_compressor = Sqwish
+
+# or use strict mode:
+config.assets.css_compressor = Sqwish::Strict
 ```
 
 ## Authors

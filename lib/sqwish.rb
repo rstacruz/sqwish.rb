@@ -1,6 +1,7 @@
 require 'execjs'
 
 module Sqwish
+
   class << self
     def minify(src, options={:strict => false})
       is_strict = !! options[:strict]
@@ -34,4 +35,13 @@ module Sqwish
       "0.2.0"
     end
   end
+
+  # For Rails
+  # config.assets.css_compressor = SqwishStrict
+  module Strict
+    def compress(src)
+      Sqwish.compress src, strict: true
+    end
+  end
+
 end
